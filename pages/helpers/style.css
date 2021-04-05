@@ -8,9 +8,8 @@ body {
 .container {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: 2fr 2fr 2fr auto;
-  grid-template-rows: 2fr 2fr 2fr auto;
-  color: #444;
+  grid-template-columns: 25rem 25rem auto;
+  color: #444; 
 }
 
 .box {
@@ -22,22 +21,11 @@ body {
 }
 
 .a {
-  grid-column: 1 / span 15;
-    grid-row: 1 / span 1;
+  grid-column: 1 / span 10;
+  grid-row: 1 / span 1;
 }
 
 .b {
-  grid-column: 2 / span 2;
-  grid-row: 3 / span 2;
-  position:fixed;
-}
-
-.c {
-  grid-column: 2 / span 2;
-  grid-row: 4 / span 2;
-  position:fixed;
-}
-
-.navList {
-  padding-left: 90%;
+  grid-column: 2 / span 6;
+  grid-row: 4 / span 70;
 }
