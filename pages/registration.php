@@ -6,7 +6,7 @@
 <body>
 <main class="container">
 <?php makeHeader(); 
-makeMain();
+echo "<div>Coming Soon!</div>"
 ?>
 
 </main>

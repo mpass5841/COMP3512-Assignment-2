@@ -12,6 +12,12 @@ body {
   color: #444; 
 }
 
+#secondContainer {
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: 25rem 25rem;
+}
+
 .box {
   background-color: #2f4550;
   color: white;
@@ -20,12 +26,78 @@ body {
   font-size: 150%;
 }
 
+.sbox {
+  background-color: #537281;
+  color: white;
+  border-radius: 5px;
+  padding: 50px;
+  font-size: 150%;
+  text-align: center;
+}
+
+a .About{
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 3;
+}
+
+a .Companies{
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+}
+
+a .Login{
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1;
+}
+
+a .Signup{
+  grid-column: 3 / span 1;
+  grid-row: 3 / span 1;
+}
+
+ a .Portfolio{
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1;
+display: none;
+}
+
+a .Favorites{
+  grid-column: 3 / span 1;
+  grid-row: 3 / span 1;
+display: none;
+}
+
+a .Profile{
+  grid-column: 1 / span 1;
+  grid-row: 5 / span 1;
+display: none;
+}
+
+a .Logout{
+  grid-column: 3 / span 1;
+  grid-row: 5 / span 1;
+display: none;
+}
+
 .a {
   grid-column: 1 / span 10;
   grid-row: 1 / span 1;
 }
 
-.b {
-  grid-column: 2 / span 6;
+.bMain {
+  grid-column: 2 / span 2;
   grid-row: 4 / span 70;
+  max-width: 830px;
+}
+
+#bars {
+  display: grid;
+  justify-content: right;
+}
+div {
+  background-color: #2f4550;
+  color: white;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
 }
