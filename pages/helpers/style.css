@@ -20,7 +20,6 @@ body {
 
 .box {
   background-color: #2f4550;
-  color: white;
   border-radius: 5px;
   padding: 20px;
   font-size: 150%;
@@ -28,7 +27,6 @@ body {
 
 .sbox {
   background-color: #537281;
-  color: white;
   border-radius: 5px;
   padding: 50px;
   font-size: 150%;
@@ -84,10 +82,28 @@ display: none;
   grid-row: 1 / span 1;
 }
 
+.b{
+  grid-column: 2 / span 2;
+  grid-row: 4 / span 70;
+  max-width: 830px;
+}
+
 .bMain {
   grid-column: 2 / span 2;
   grid-row: 4 / span 70;
   max-width: 830px;
+}
+
+.btable {
+  grid-column: 2 / span 2;
+  grid-row: 4 / span 70;
+  max-height: 650px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+table tr td {
+  border-right: 1px solid #8FA575;
 }
 
 #bars {

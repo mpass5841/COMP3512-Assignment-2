@@ -15,6 +15,12 @@ class CompanyDB{
             $statement = DatabaseHelper::runQuery($this->pdo, $sql, null);
             return $statement->fetchAll();
             }
+
+            public function getStockHistory($symbol){
+                $sql = "SELECT * FROM history WHERE symbol='$symbol'";
+                $statement = DatabaseHelper::runQuery($this->pdo, $sql, null);
+                return $statement->fetchAll();
+            }
 }
 
 
