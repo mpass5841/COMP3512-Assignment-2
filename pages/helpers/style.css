@@ -102,6 +102,24 @@ display: none;
   overflow-x: hidden;
 }
 
+.bSingle{
+  grid-column: 2 / span 5;
+  grid-row: 4 / span 70;
+  max-height: 650px;
+  max-width: 700px;
+}
+
+.compIMG{
+  height: 100px;
+  max-width: 250px;
+  float: left;
+}
+
+
+#mSpan{
+  margin-top: 50px;
+}
+
 table tr td {
   border-right: 1px solid #8FA575;
 }
