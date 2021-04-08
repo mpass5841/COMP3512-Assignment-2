@@ -23,6 +23,17 @@ class CompanyDB{
             }
 }
 
+class UserDB{
+    public function __construct($conn) {
+        $this->pdo = $conn;
+        }
+    public function getAllUsers() {
+        $sql = 'SELECT * FROM users';
+        $statement = DatabaseHelper::runQuery($this->pdo, $sql, null);
+        return $statement->fetchAll();
+        }   
+}
+
 
 
 class DatabaseHelper {
