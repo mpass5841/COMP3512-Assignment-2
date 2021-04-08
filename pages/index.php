@@ -1,11 +1,31 @@
 <head>
 <style><?php include "helpers/style.css" ?></style>
-<?php include "helpers/generate-header.php"; ?>
+<?php include "helpers/generate-header.php"; 
+include "helpers/api-users.php";
+?>
 
 </head>
 <body>
 <main class='container'>
-<?php makeHeader(); 
+<?php
+session_start();
+
+if(isset($_POST['email'])){
+    $data = json_encode(getUsers());
+    $userData = json_decode(($data), true);
+    foreach($userData as $i){
+        if($_POST['email'] == $i['email']){
+          if(password_verify($_POST['password'], $i['password'])){  
+               $_SESSION['login'] = true;
+               $_SESSION['id'] = $i['id'];
+          }else{
+              echo "lolcats";
+        }
+        }
+    }
+    }
+
+makeHeader(); 
 makeMain();
 
 function makeButtons(){
@@ -23,7 +43,7 @@ function makeMain(){
     echo "<div class='box bMain'id='secondContainer'>";
     makeButtons();
     
-    if(isset($_GET['login'])){
+    if($_SESSION['login'] = true){
         echo "<script>
         $('a .Signup').css('display', 'none');
         $('a .Login').css('display', 'none');

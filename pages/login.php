@@ -1,13 +1,16 @@
-<link rel=stylesheet href='helpers/style.css'>;
 <head>
-<?php include "helpers/generate-header.php"; ?>
+<style><?php include "helpers/style.css" ?></style>
+<?php include "helpers/generate-header.php"; 
+
+?>
 
 </head>
 <body>
 <main class="container">
 <?php makeHeader(); 
+
 echo "<div class='box b'>LOGIN";
-echo "<form action='/action_page.php'>
+echo "<form method=post action=index.php>
 <label for='email'>Email:</label>
 <input type='text' id='email' name='email'><br>
 <label for='password'>Password:</label>
