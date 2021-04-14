@@ -42,11 +42,11 @@ function makeMain($data, $stock){
     foreach($data as $i){
         echo "<tr>";
        echo "<td>".$i['date']."</td>";
-       echo "<td>".$i['open']."</td>";
-       echo "<td>".$i['high']."</td>";
-       echo "<td>".$i['low']."</td>";
-       echo "<td>".$i['close']."</td>";
-       echo "<td>".$i['volume']."</td>";
+       echo "<td>".number_format($i['open'],2)."</td>";
+       echo "<td>".number_format($i['high'],2)."</td>";
+       echo "<td>".number_format($i['low'],2)."</td>";
+       echo "<td>".number_format($i['close'],2)."</td>";
+       echo "<td>".number_format($i['volume'],0)."</td>";
        echo "</tr>";
      }
     echo "</table>";

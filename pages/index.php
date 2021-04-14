@@ -29,28 +29,43 @@ makeHeader();
 makeMain();
 
 function makeButtons(){
-    echo "<a href='about.php'><div class= 'sbox About'>About</div></a>";
-    echo "<a href='companies.php'><div class= 'sbox Companies'>Companies</div></a>";
-    echo "<a href='login.php'><div class= 'sbox Login'>Login</div></a>";
-    echo "<a href='registration.php'><div class= 'sbox Signup'>Signup</div></a>";
-    echo "<a href='portfolio.php'><div class= 'sbox Portfolio'>Portfolio</div></a>";
-    echo "<a href='favorites.php'><div class= 'sbox Favorites'>Favorites</div></a>";
-    echo "<a href='profile.php'><div class= 'sbox Profile'>Profile</div></a>";
-    echo  "<a><div class= 'sbox Logout'>Logout</div></a>";
+    echo "<a href='about.php' id='About'><div class= 'sbox' >About</div></a>";
+    echo "<a href='companies.php' id='Companies'><div class= 'sbox' >Companies</div></a>";
+    echo "<a href='login.php' id='Login'><div class= 'sbox' >Login</div></a>";
+    echo "<a href='registration.php' id='Signup'><div class= 'sbox' >Signup</div></a>";
+    echo "<a href='portfolio.php' id='Portfolio'><div class= 'sbox' >Portfolio</div></a>";
+    echo "<a href='favorites.php' id='Favorites'><div class= 'sbox' >Favorites</div></a>";
+    echo "<a href='profile.php' id='Profile'><div class= 'sbox' >Profile</div></a>";
+    echo "<form method='get' id='Logout' action='index.php'> <input class='sbox' type='submit' name='logout' value='Logout'/> </form>";
+    //echo "<a id='Logout'><div class= 'sbox' >Logout</div></a>";
 }
 
 function makeMain(){
     echo "<div class='box bMain'id='secondContainer'>";
     makeButtons();
     
-    if($_SESSION['login'] = true){
+    if(isset($_GET['logout'])){
+        unset($_SESSION['login']);
+        unset($_GET['logout']);
+    }
+
+    if(isset($_SESSION['login']) && $_SESSION['login'] == true){
         echo "<script>
-        $('a .Signup').css('display', 'none');
-        $('a .Login').css('display', 'none');
-        $('a .Portfolio').css('display', 'block');
-        $('a .Favorites').css('display', 'block');
-        $('a .Profile').css('display', 'block');
-        $('a .Logout').css('display', 'block');
+        document.querySelector('#Signup').style.display = 'none';
+        document.querySelector('#Login').style.display = 'none';
+        document.querySelector('#Portfolio').style.display = 'block';
+        document.querySelector('#Favorites').style.display = 'block';
+        document.querySelector('#Profile').style.display = 'block';
+        document.querySelector('#Logout').style.display = 'block';
+        </script>";
+    } else{
+        echo "<script>
+        document.querySelector('#Signup').style.display = 'block';
+        document.querySelector('#Login').style.display = 'block';
+        document.querySelector('#Portfolio').style.display = 'none';
+        document.querySelector('#Favorites').style.display = 'none';
+        document.querySelector('#Profile').style.display = 'none';
+        document.querySelector('#Logout').style.display = 'none';
         </script>";
     }
    echo  "</div>";
