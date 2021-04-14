@@ -99,15 +99,10 @@ grid-row: 5 / span 1;
 display: none;
 }
 
-#Logout{
+.sbox #Logout{
 grid-column: 2 / span 1;
 grid-row: 5 / span 1;
 display: none;
-width: 100%;
-border: none;
-text-align: center;
-text-decoration: none;
-color: white;
 }
 
 .a {
@@ -381,12 +376,12 @@ border-color: black;
  }
 
  /* styles for mobile protrait screen */
- @media (min-width: 400px) and (max-width: 500px){
+ @media (min-width: 480px) and (max-width: 767px){
 
   .container {
     margin-left: -20px;
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 9px;
     grid-template-columns: 9rem 9rem auto;
     }
 
@@ -404,12 +399,24 @@ border-color: black;
         grid-template-columns: 15rem 15rem auto;
         }
       
+
+    #abDiv{
+      display: grid;
+      grid-column: 1 / span 5;
+    }    
     
     #secondContainer {
     display: grid;
+    justify-content: space-around;
     grid-gap: 10px;
     grid-template-columns: 9rem 9rem;
     }
+
+     
+    #secondContainer a{
+      max-height: 55px;
+      width: auto;
+      }
     
     .box {
     background-color: #2f4550;
@@ -421,7 +428,301 @@ border-color: black;
     .bMain {
       grid-column: 1 / span 2;
       grid-row: 4 / span 70;
-      width: 300px;
+      width: 500px;
+      }
+
+      .bTable {
+        grid-column: 1 / span 2;
+        grid-row: 4 / span 70;
+        width: 450px;
+        }
+
+
+        .bSingle {
+          grid-column: 1 / span 2;
+          grid-row: 4 / span 70;
+          width: 400px;
+          }
+    
+    .sbox {
+    background-color: #537281;
+    border-radius: 5px;
+    padding: 25px;
+    max-height: 5px;
+    font-size: 100%;
+    text-align: center;
+    }
+
+    .sbox #About{
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
+      }
+      
+      .sbox #Companies{
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
+      }
+      
+      .sbox #Login{
+      grid-column: 1 / span 1;
+      grid-row: 5 / span 1;
+      }
+      
+      .sbox #Signup{
+      grid-column: 1 / span 1;
+      grid-row: 7 / span 1;
+      }
+      
+      .sbox #Portfolio{
+      grid-column: 1 / span 1;
+      grid-row: 3 / span 1;
+      display: none;
+      }
+      
+      .sbox #Favorites{
+      grid-column: 1 / span 1;
+      grid-row: 5 / span 1;
+      display: none;
+      }
+      
+      .sbox #Profile{
+      grid-column: 1 / span 1;
+      grid-row: 7 / span 1;
+      display: none;
+      }
+      
+      .sbox #Logout{
+      grid-column: 1 / span 1;
+      grid-row: 9 / span 1;
+      display: none;
+      }
+      
+
+   /*
+ * Made by Erik Terwan
+ * 24th of November 2015
+ * MIT license
+ *
+ *
+ * If you are thinking of using this in
+ * production code, beware of the browser
+ * prefixes.
+ */
+
+ body
+ {
+   margin: 0;
+   padding: 0;
+   
+   /* make it look decent enough */
+   background: #232323;
+   color: #cdcdcd;
+   font-family: "Avenir Next", "Avenir", sans-serif;
+   
+   overflow-x: hidden; /* needed because hiding the menu on the right side is not perfect,  */
+ }
+ 
+ a
+ {
+   text-decoration: none;
+   color: #232323;
+   
+   transition: color 0.3s ease;
+ }
+ 
+ a:hover
+ {
+   color: tomato;
+ }
+ 
+ #menuToggle
+ {
+   display: block;
+   position: absolute;
+   top: 25px;
+   right: 25px;
+   
+   z-index: 1;
+   
+   -webkit-user-select: none;
+   user-select: none;
+ }
+ 
+ #menuToggle input
+ {
+   display: block;
+   width: 40px;
+   height: 32px;
+   position: absolute;
+   top: 14px;
+   right: 14px;
+   
+   cursor: pointer;
+   
+   opacity: 0; /* hide this */
+   z-index: 2; /* and place it over the hamburger */
+   
+   -webkit-touch-callout: none;
+ }
+ 
+ /*
+  * Just a quick hamburger
+  */
+ #menuToggle span
+ {
+   display: block;
+   width: 33px;
+   height: 4px;
+   margin-bottom: 5px;
+   position: relative;  
+   
+   background: #cdcdcd;
+   border-radius: 3px;
+   
+   z-index: 1;
+   
+   transform-origin: 4px 0px;
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               opacity 0.55s ease;
+ }
+ 
+ #menuToggle span:first-child
+ {
+   transform-origin: 0% 0%;
+ }
+ 
+ #menuToggle span:nth-last-child(2)
+ {
+   transform-origin: 0% 100%;
+ }
+ 
+ /* 
+  * Transform all the slices of hamburger
+  * into a crossmark.
+  */
+ #menuToggle input:checked ~ span
+ {
+   opacity: 1;
+   transform: rotate(45deg) translate(-2px, -1px);
+   background: #232323;
+ }
+ 
+ /*
+  * But let's hide the middle one.
+  */
+ #menuToggle input:checked ~ span:nth-last-child(3)
+ {
+   opacity: 0;
+   transform: rotate(0deg) scale(0.2, 0.2);
+ }
+ 
+ /*
+  * Ohyeah and the last one should go the other direction
+  */
+ #menuToggle input:checked ~ span:nth-last-child(2)
+ {
+   opacity: 1;
+   transform: rotate(-45deg) translate(0, -1px);
+ }
+ 
+ /*
+  * Make this absolute positioned
+  * at the top right of the screen
+  */
+ #menu
+ {
+   position: absolute;
+   width: 150px;
+   margin: -100px 0 0 0;
+   padding: 50px;
+   padding-top: 125px;
+   right: -100px;
+   
+   background: #ededed;
+   list-style-type: none;
+   -webkit-font-smoothing: antialiased;
+   /* to stop flickering of text in safari */
+   
+   transform-origin: 0% 0%;
+   transform: translate(100%, 0);
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+ }
+ 
+ #menu li
+ {
+   padding: 10px 0;
+   font-size: 22px;
+ }
+ 
+ /*
+  * And let's fade it in from the left
+  */
+ #menuToggle input:checked ~ ul
+ {
+   transform: none;
+   opacity: 1;
+ } 
+    
+}
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+  .container {
+    margin-left: -10px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 12rem 12rem auto;
+    }
+
+    .containerC {
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: 25rem 25rem auto;
+      }
+
+      
+
+      .containerP {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 15rem 15rem auto;
+        }
+      
+    
+        #secondContainer {
+          display: grid;
+          justify-content: space-around;
+          grid-gap: 10px;
+          grid-template-columns: 9rem 9rem;
+          }
+      
+           
+          #secondContainer a{
+            max-height: 55px;
+            width: auto;
+            }
+
+
+          #abDiv{
+            display: grid;
+            grid-column: 1 / 5;
+          }
+    
+    .box {
+    background-color: #2f4550;
+    border-radius: 5px;
+    padding: 25px;
+    font-size: 100%;
+    }
+
+    .bMain {
+      grid-column: 1 / span 2;
+      grid-row: 4 / span 70;
+      width: 800px;
       }
 
       .bTable {
@@ -444,6 +745,51 @@ border-color: black;
     font-size: 100%;
     text-align: center;
     }
+
+    .sbox #About{
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
+      }
+      
+      .sbox #Companies{
+      grid-column: 1 / span 1;
+      grid-row: 3 / span 1;
+      }
+      
+      .sbox #Login{
+      grid-column: 1 / span 1;
+      grid-row: 5 / span 1;
+      }
+      
+      .sbox #Signup{
+      grid-column: 1 / span 1;
+      grid-row: 7 / span 1;
+      }
+      
+      .sbox #Portfolio{
+      grid-column: 1 / span 1;
+      grid-row: 3 / span 1;
+      display: none;
+      }
+      
+      .sbox #Favorites{
+      grid-column: 1 / span 1;
+      grid-row: 5 / span 1;
+      display: none;
+      }
+      
+      .sbox #Profile{
+      grid-column: 1 / span 1;
+      grid-row: 7 / span 1;
+      display: none;
+      }
+      
+      .sbox #Logout{
+      grid-column: 1 / span 1;
+      grid-row: 9 / span 1;
+      display: none;
+      }
+      
 
    /*
  * Made by Erik Terwan
