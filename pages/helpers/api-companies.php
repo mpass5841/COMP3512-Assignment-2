@@ -1,7 +1,7 @@
 <?php
 require_once 'a2-helper.php';
 require_once 'configa2.inc.php';
-
+//Makes a connection to the companies table
 function getCompany()
 {
     $conn = DatabaseHelper::createConnection(array(DBCONNSTRING, DBUSER, DBPASS));

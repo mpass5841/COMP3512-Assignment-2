@@ -1,4 +1,5 @@
 <?php
+//Makes a connection to the users table
 function getUsers(){
     require_once 'a2-helper.php';
     require_once 'configa2.inc.php';

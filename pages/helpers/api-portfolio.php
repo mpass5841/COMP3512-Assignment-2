@@ -1,5 +1,5 @@
 <?php
-
+//Makes a connection to the portfolio table
 function getPortfolio($id){
     require_once 'a2-helper.php';
     require_once 'configa2.inc.php';

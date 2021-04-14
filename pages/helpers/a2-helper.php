@@ -1,5 +1,5 @@
 <?php
-
+//Makes connections to the database based upon the page 
 class CompanyDB
 {
     public function __construct($conn)

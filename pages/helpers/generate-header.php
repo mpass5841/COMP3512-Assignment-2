@@ -1,6 +1,7 @@
 <style><?php include "helpers/style.css" ?></style>
 <?php
 
+//Generates the header for each page, including the hamburger menu
 function makeHeader(){
 echo "<div class='box a'>";
  echo "<a href='index.php'><img id='logo' src=logos/bestrade.jpg style='height:60px'></a>";

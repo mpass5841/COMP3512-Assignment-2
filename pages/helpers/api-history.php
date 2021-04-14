@@ -1,5 +1,5 @@
 <?php
-
+//Makes a connection to the history table
 function getHistory($symbol){
 require_once 'a2-helper.php';
 require_once 'configa2.inc.php';
