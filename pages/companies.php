@@ -56,7 +56,7 @@ function makeMain()
 
         if (is_numeric(stripos($company["name"], $filterText)) || $filterText == "") {
 
-            echo "<li style='cursor: pointer;' id='" . $company["symbol"] . "'> <img id='img" . $company["symbol"] . "'src='/logos/" . $company["symbol"] . ".svg' style='width:100px;height:50px'>" . $company["symbol"] . "  " . $company["name"] . "</li>";
+            echo "<li style='cursor: pointer;' id='" . $company["symbol"] . "'> <img id='img" . $company["symbol"] . "'src='./logos/" . $company["symbol"] . ".svg' style='width:100px;height:50px'>" . $company["symbol"] . "  " . $company["name"] . "</li>";
             echo "<script>
                 document.querySelector('#" . $company["symbol"] . "').addEventListener('click', () => {
                     document.location.href = 'single-company.php?symbol=" . $company["symbol"] . "';
