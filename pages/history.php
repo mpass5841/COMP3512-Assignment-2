@@ -1,11 +1,11 @@
 <head>
 <style><?php 
 session_start();
-include "helpers/style.css" ?></style>
+include "./helpers/style.css" ?></style>
 <?php 
 
-include "helpers/generate-header.php";
-include "helpers/api-history.php"; 
+include "./helpers/generate-header.php";
+include "./helpers/api-history.php"; 
 ?>
 
 </head>

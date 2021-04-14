@@ -1,9 +1,9 @@
-<link rel=stylesheet href='helpers/style.css'>
+<link rel=stylesheet href='./helpers/style.css'>
 <head>
 <?php 
 session_start();
-include "helpers/generate-header.php";
-include "helpers/api-companies.php";?>
+include "./helpers/generate-header.php";
+include "./helpers/api-companies.php";?>
 
 </head>
 <body>

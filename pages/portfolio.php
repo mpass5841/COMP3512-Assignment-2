@@ -1,12 +1,12 @@
-<link rel=stylesheet href='helpers/style.css'>
+<link rel=stylesheet href='./helpers/style.css'>
 <head>
 <style><?php 
 session_start();
-include "helpers/style.css"?></style>
-<?php include "helpers/generate-header.php";
-include "helpers/api-portfolio.php";
-include "helpers/api-companies.php";
-include "helpers/api-history.php";
+include "./helpers/style.css"?></style>
+<?php include "./helpers/generate-header.php";
+include "./helpers/api-portfolio.php";
+include "./helpers/api-companies.php";
+include "./helpers/api-history.php";
 ?>
 
 </head>

@@ -1,9 +1,9 @@
 <head>    
 <style><?php
 session_start();
-include "helpers/style.css" ?></style>
-<?php include "helpers/generate-header.php"; 
-include "helpers/api-users.php";
+include "./helpers/style.css" ?></style>
+<?php include "./helpers/generate-header.php"; 
+include "./helpers/api-users.php";
 ?>
 
 </head>
@@ -39,7 +39,7 @@ function makeButtons(){
     echo "<a href='portfolio.php' id='Portfolio'><div class= 'sbox' >Portfolio</div></a>";
     echo "<a href='favorites.php' id='Favorites'><div class= 'sbox' >Favorites</div></a>";
     echo "<a href='profile.php' id='Profile'><div class= 'sbox' >Profile</div></a>";
-    echo "<form method='get' id='Logout' action='index.php'> <input class='sbox' type='submit' name='logout' value='Logout'/> </form>";
+    echo "<form method='get'  action='index.php'> <input class='sbox' id='Logout' type='submit' name='logout' value='Logout'/> </form>";
 }
 
 //Sets diplays based upon login status

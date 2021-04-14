@@ -2,7 +2,7 @@
 <head>
 <?php 
 session_start();
-include "helpers/generate-header.php"; ?>
+include "./helpers/generate-header.php"; ?>
 
 </head>
 <body>
