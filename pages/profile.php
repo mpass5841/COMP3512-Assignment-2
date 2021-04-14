@@ -8,7 +8,8 @@ include "helpers/generate-header.php"; ?>
 <body>
 <main class="container">
 <?php makeHeader(); 
-
+//Displays a coming soon message
+echo "<div>Coming Soon!</div>"
 ?>
 
 </main>

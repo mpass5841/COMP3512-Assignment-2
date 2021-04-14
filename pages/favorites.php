@@ -1,4 +1,4 @@
-<link rel=stylesheet href='helpers/style.css'>;
+<link rel=stylesheet href='helpers/style.css'>
 <head>
 <?php 
 session_start();
@@ -7,7 +7,7 @@ include "helpers/api-companies.php";?>
 
 </head>
 <body>
-<main class="container">
+<main class="containerC">
 <?php
 
 makeHeader();
@@ -35,7 +35,7 @@ if (isset($_POST['removeAll'])) {
 
 
 <?php
-
+//checks the current sessions favorites
 if (isset($_SESSION["favourites"])) {
     $favouriteList = $_SESSION["favourites"];
     makeMain($favouriteList);
@@ -44,12 +44,12 @@ function makeMain($favouriteList)
 {
 
     if (isset($_SESSION["favourites"])) {
-
+        //displays a list based upon the users chosen favorites
         echo "<ul id='list'>";
         foreach ($favouriteList as $favourite) {
             echo "<li style='cursor: pointer;' id='" . $favourite[0]["symbol"] . "'> <img src='../logos/" . $favourite[0]["symbol"] . ".svg' style='width:100px;height:50px'>" . $favourite[0]["symbol"] . "  " . $favourite[0]["name"] . "</li>";
 
-            echo "<form method='post' id='remove'> <input type='submit' name='remove' value='Remove " . $favourite[0]['symbol'] . "'/> </form>";
+            echo "<form method='post' id='remove'> <input type='submit' id='buttn' name='remove' value='Remove " . $favourite[0]['symbol'] . "'/> </form>";
 
             echo "<script>
             document.querySelector('#" . $favourite[0]["symbol"] . "').addEventListener('click', () => {
@@ -62,7 +62,7 @@ function makeMain($favouriteList)
 
         }
         echo "</ul>
-        <form method='post' id='removeAll'> <input type='submit' name='removeAll' value='Remove All'/> </form>
+        <form method='post' id='removeAll'> <input type='submit' id='buttn' name='removeAll' value='Remove All'/> </form>
         </div>";
     }
 }

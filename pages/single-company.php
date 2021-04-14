@@ -12,12 +12,12 @@ include "helpers/api-companies.php";
 <?php 
 
 makeHeader();
-
+//retrieves the company as chosen by the user
 $data = json_encode(getCompany());
 $stockData = json_decode(($data), true);
 
 echo "<div class='box bSingle'>";
-
+//Displays the information of the chosen stock
 foreach ($stockData as $info) {
     echo "<h2>Company Information</h2>
         <img class='compIMG'src='logos/" . $info['symbol'] . ".svg'></img></br>
@@ -46,9 +46,9 @@ foreach ($stockData as $info) {
 <?php
 
 if(isset($_SESSION['login']) && $_SESSION['login'] == true){
-echo "<form method='post' id='add' action='favorites.php'> <input type='submit' name='add' value='Favourite " . $stock['symbol'] . "'/> </form>";
+echo "<form method='post' id='add' action='favorites.php'> <input type='submit' id='buttn' name='add' value='Favourite " . $stock['symbol'] . "'/> </form>";
 }
-echo "<a href='history.php?symbol=" . $info['symbol'] . "'><button>$ Month</button></a>";
+echo "<a href='history.php?symbol=" . $info['symbol'] . "'><button id='bttn'>$ Month</button></a>";
 echo "</div>";
 
 ?>

@@ -11,9 +11,9 @@ include "helpers/api-history.php";
 
 </head>
 <body>
-<main class="container">
+<main class="containerP">
 <?php
-
+//gets the users id from the session
 $data = getPortfolio($_SESSION['id']);
 makeHeader();
 
@@ -28,38 +28,8 @@ makeHeader();
 makeMain($data);
 function makeMain($data)
 {
-
+//Creates the portfolio list based upon the data in the portfolio table
     $portfolioList = $data;
-    /*
-    $properPortfolioList = array();
-    $temp = 0;
-    
-    foreach ($portfolioList as $portfolio => $item) {
-        $duplicate = false;
-        $count = 0;
-        foreach ($properPortfolioList as $properItem) {
-            
-            if ($properItem['symbol'] == $item['symbol']) {
-                
-                (int) $properItem['amount'] += (int) $item['amount'];
-                
-                //array_push($properPortfolioList, $properItem);
-                var_dump($properItem['amount']);
-                $duplicate = true;
-            }
-            
-            
-            $count++;
-            
-        }
-        
-        
-        if ($duplicate == false) {
-            array_push($properPortfolioList, $item);
-        }
-    }
-    var_dump($properPortfolioList);
-    */
     echo "<table>
             <tr>
                 <th></th>

@@ -1,4 +1,4 @@
-<head>
+<head>    
 <style><?php
 session_start();
 include "helpers/style.css" ?></style>
@@ -11,7 +11,7 @@ include "helpers/api-users.php";
 <main class='container'>
 <?php
 
-
+//gets the email from the login page, then verifies user based off the user table
 if(isset($_POST['email'])){
     $data = json_encode(getUsers());
     $userData = json_decode(($data), true);
@@ -30,6 +30,7 @@ if(isset($_POST['email'])){
 makeHeader(); 
 makeMain();
 
+//Creates the main options
 function makeButtons(){
     echo "<a href='about.php' id='About'><div class= 'sbox' >About</div></a>";
     echo "<a href='companies.php' id='Companies'><div class= 'sbox' >Companies</div></a>";
@@ -39,9 +40,9 @@ function makeButtons(){
     echo "<a href='favorites.php' id='Favorites'><div class= 'sbox' >Favorites</div></a>";
     echo "<a href='profile.php' id='Profile'><div class= 'sbox' >Profile</div></a>";
     echo "<form method='get' id='Logout' action='index.php'> <input class='sbox' type='submit' name='logout' value='Logout'/> </form>";
-    //echo "<a id='Logout'><div class= 'sbox' >Logout</div></a>";
 }
 
+//Sets diplays based upon login status
 function makeMain(){
     echo "<div class='box bMain'id='secondContainer'>";
     makeButtons();

@@ -12,6 +12,7 @@ include "helpers/api-history.php";
 <body>
 <main class="container">
 <?php makeHeader(); 
+//gets the stock history of the chosen stock from the stock table
 if(isset($_GET['symbol'])){
 $stock = $_GET['symbol'];
 $data = json_encode(getHistory($stock));
@@ -20,6 +21,7 @@ if(isset($_GET['select'])){
 $order = $_GET['select'];
 
 // code sourced from https://www.javaer101.com/en/article/29231853.html for the sort
+//sorts based upon the chosen header
 $helper = [];
 foreach ($stockData as $r){
     $helper[] = $r[$order];
@@ -31,7 +33,7 @@ array_multisort($helper, SORT_ASC, $stockData);
     makeMain($stockData, $stock);
 }
 }
-
+//displays the stock history in a table
 function makeMain($data, $stock){
     echo "<div class='box btable'>";
     echo "<table id=stockTable>";
