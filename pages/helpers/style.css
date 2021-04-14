@@ -99,10 +99,15 @@ grid-row: 5 / span 1;
 display: none;
 }
 
-.sbox #Logout{
+#Logout{
 grid-column: 2 / span 1;
 grid-row: 5 / span 1;
 display: none;
+width: 100%;
+border: none;
+text-align: center;
+text-decoration: none;
+color: white;
 }
 
 .a {
