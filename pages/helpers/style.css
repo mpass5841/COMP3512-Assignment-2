@@ -9,7 +9,6 @@ body {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: 25rem 25rem auto;
-  color: #444; 
 }
 
 #secondContainer {
@@ -33,48 +32,52 @@ body {
   text-align: center;
 }
 
-a .About{
-  grid-column: 1 / span 1;
-  grid-row: 1 / span 3;
+a {
+  text-decoration: none;
 }
 
-a .Companies{
+.sbox #About{
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.sbox #Companies{
   grid-column: 2 / span 1;
   grid-row: 1 / span 1;
 }
 
-a .Login{
+.sbox #Login{
   grid-column: 1 / span 1;
   grid-row: 3 / span 1;
 }
 
-a .Signup{
-  grid-column: 3 / span 1;
+.sbox #Signup{
+  grid-column: 2 / span 1;
   grid-row: 3 / span 1;
 }
 
- a .Portfolio{
+.sbox #Portfolio{
   grid-column: 1 / span 1;
   grid-row: 3 / span 1;
 display: none;
 }
 
-a .Favorites{
-  grid-column: 3 / span 1;
+.sbox #Favorites{
+  grid-column: 2 / span 1;
   grid-row: 3 / span 1;
 display: none;
 }
 
-a .Profile{
+.sbox #Profile{
   grid-column: 1 / span 1;
   grid-row: 5 / span 1;
-display: none;
+  display: none;
 }
 
-a .Logout{
-  grid-column: 3 / span 1;
+.sbox #Logout{
+  grid-column: 2 / span 1;
   grid-row: 5 / span 1;
-display: none;
+  display: none;
 }
 
 .a {
@@ -120,8 +123,13 @@ display: none;
   margin-top: 50px;
 }
 
-table tr td {
+table {
+  color: white;
+}
+
+td {
   border-right: 1px solid #8FA575;
+  border-left: 1px solid #8FA575;
 }
 
 #bars {
@@ -134,4 +142,30 @@ div {
   border-radius: 5px;
   padding: 20px;
   font-size: 150%;
+}
+
+#portfolioDiv {
+  grid-column: 1 / span 2;
+}
+
+ul {
+  
+  list-style-type: none;
+  padding: 0%;
+  display: inline-block;
+
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  overflow-y: scroll;
+  border-style: solid;
+  border-color: black;
+
+}
+
+@media screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
 }
