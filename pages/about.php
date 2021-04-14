@@ -11,7 +11,7 @@ include "./helpers/generate-header.php"; ?>
 //Displays the about page information
 makeHeader(); 
 echo "<div id='abDiv'><h2>About</h2>";
-echo "<p>Bestrade Stock Viewing App<br>COMP-3512<br>Mount Royal University<br>Randy Connolly<br>Winter Semester 2021<br>Technologies Used??";
+echo "<p>Bestrade Stock Viewing App<br>COMP-3512<br>Mount Royal University<br>Randy Connolly<br>Winter Semester 2021<br>Technologies Used: GitHub <br> Heroku <br> FreeMYSQLHosting.net <br>";
 echo "<p>Ethan Aggarwal - <a href='https://github.com/eagga857'>GitHub Repo</a></p>";
 echo "<p>Matthew Passarelli - <a href='https://github.com/mpass5841'>GitHub Repo</a></p>";
 echo "<p>Sebastian Wimmer - <a href='https://github.com/swimm830'>GitHub Repo</a></p>";
