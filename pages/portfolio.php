@@ -1,6 +1,6 @@
 <link rel=stylesheet href='./helpers/style.css'>
 <head>
-<style><?php 
+<style><?php
 session_start();
 include "./helpers/style.css"?></style>
 <?php include "./helpers/generate-header.php";
@@ -41,6 +41,11 @@ function makeMain($data)
             </tr>";
 
     $total = 0;
+
+    echo "<script>
+        let duplicates = '';
+        </script>";
+
     foreach ($portfolioList as $portfolio => $item) {
         $total += getHistory($item['symbol'])[0]['close'] * $item['amount'];
         $_GET['symbol'] = $item['symbol'];
@@ -65,9 +70,15 @@ function makeMain($data)
               </td>";
         echo "</tr>";
         echo "<script>
-                document.querySelector('#" . $item['symbol'] . "').addEventListener('click', () => {
-                    document.location.href = 'single-company.php?symbol=" . $item["symbol"] . "';
-                });
+
+                duplicates = document.querySelectorAll('#" . $item['symbol'] . "');
+                duplicates.forEach(addListeners);
+
+                function addListeners(item){
+                        item.addEventListener('click', () => {
+                                document.location.href = 'single-company.php?symbol=" . $item["symbol"] . "';
+                            });
+                }
               </script>";
     }
 
