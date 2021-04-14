@@ -14,6 +14,7 @@ include "./helpers/api-users.php";
 if(isset($_GET['logout'])){
     unset($_SESSION['login']);
     unset($_GET['logout']);
+    unset($_SESSION['favourites']);
 }
 
 //gets the email from the login page, then verifies user based off the user table
