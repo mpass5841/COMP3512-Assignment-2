@@ -1,6 +1,8 @@
 
 <head>
-<style><?php include "helpers/style.css"?></style>
+<style><?php
+session_start();
+include "helpers/style.css"?></style>
 <?php include "helpers/generate-header.php";
 include "helpers/api-companies.php";
 ?>
@@ -9,7 +11,7 @@ include "helpers/api-companies.php";
 <body>
 <main class="container">
 <?php 
-session_start();
+
 makeHeader();
 
 $data = json_encode(getCompany());
@@ -43,7 +45,10 @@ foreach ($stockData as $info) {
 
 
 <?php
+
+if(isset($_SESSION['login']) && $_SESSION['login'] == true){
 echo "<form method='post' id='add' action='favorites.php'> <input type='submit' name='add' value='Favourite " . $stock['symbol'] . "'/> </form>";
+}
 echo "<a href='history.php?symbol=" . $info['symbol'] . "'><button>$ Month</button></a>";
 echo "</div>";
 
