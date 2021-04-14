@@ -1,171 +1,351 @@
 body {
-    margin: 40px;
-    background-color: #1a1a1a;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.8rem;
+  margin: 40px;
+  background-color: #1a1a1a;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
 }
 
 .container {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 25rem 25rem auto;
+display: grid;
+grid-gap: 10px;
+grid-template-columns: 25rem 25rem auto;
 }
 
 #secondContainer {
-  display: grid;
-  grid-gap: 25px;
-  grid-template-columns: 25rem 25rem;
+display: grid;
+grid-gap: 25px;
+grid-template-columns: 25rem 25rem;
 }
 
 .box {
-  background-color: #2f4550;
-  border-radius: 5px;
-  padding: 20px;
-  font-size: 150%;
+background-color: #2f4550;
+border-radius: 5px;
+padding: 20px;
+font-size: 150%;
 }
 
 .sbox {
-  background-color: #537281;
-  border-radius: 5px;
-  padding: 50px;
-  font-size: 150%;
-  text-align: center;
+background-color: #537281;
+border-radius: 5px;
+padding: 50px;
+font-size: 150%;
+text-align: center;
 }
 
 a {
-  text-decoration: none;
+text-decoration: none;
 }
 
 .sbox #About{
-  grid-column: 1 / span 1;
-  grid-row: 1 / span 1;
+grid-column: 1 / span 1;
+grid-row: 1 / span 1;
 }
 
 .sbox #Companies{
-  grid-column: 2 / span 1;
-  grid-row: 1 / span 1;
+grid-column: 2 / span 1;
+grid-row: 1 / span 1;
 }
 
 .sbox #Login{
-  grid-column: 1 / span 1;
-  grid-row: 3 / span 1;
+grid-column: 1 / span 1;
+grid-row: 3 / span 1;
 }
 
 .sbox #Signup{
-  grid-column: 2 / span 1;
-  grid-row: 3 / span 1;
+grid-column: 2 / span 1;
+grid-row: 3 / span 1;
 }
 
 .sbox #Portfolio{
-  grid-column: 1 / span 1;
-  grid-row: 3 / span 1;
+grid-column: 1 / span 1;
+grid-row: 3 / span 1;
 display: none;
 }
 
 .sbox #Favorites{
-  grid-column: 2 / span 1;
-  grid-row: 3 / span 1;
+grid-column: 2 / span 1;
+grid-row: 3 / span 1;
 display: none;
 }
 
 .sbox #Profile{
-  grid-column: 1 / span 1;
-  grid-row: 5 / span 1;
-  display: none;
+grid-column: 1 / span 1;
+grid-row: 5 / span 1;
+display: none;
 }
 
 .sbox #Logout{
-  grid-column: 2 / span 1;
-  grid-row: 5 / span 1;
-  display: none;
+grid-column: 2 / span 1;
+grid-row: 5 / span 1;
+display: none;
 }
 
 .a {
-  grid-column: 1 / span 10;
-  grid-row: 1 / span 1;
+grid-column: 1 / span 10;
+grid-row: 1 / span 1;
 }
 
 .b{
-  grid-column: 2 / span 2;
-  grid-row: 4 / span 70;
-  max-width: 830px;
+grid-column: 2 / span 2;
+grid-row: 4 / span 70;
+max-width: 830px;
 }
 
 .bMain {
-  grid-column: 2 / span 2;
-  grid-row: 4 / span 70;
-  max-width: 830px;
+grid-column: 2 / span 2;
+grid-row: 4 / span 70;
+max-width: 830px;
 }
 
 .btable {
-  grid-column: 2 / span 2;
-  grid-row: 4 / span 70;
-  max-height: 650px;
-  overflow: scroll;
-  overflow-x: hidden;
+grid-column: 2 / span 2;
+grid-row: 4 / span 70;
+max-height: 650px;
+overflow: scroll;
+overflow-x: hidden;
 }
 
 .bSingle{
-  grid-column: 2 / span 5;
-  grid-row: 4 / span 70;
-  max-height: 650px;
-  max-width: 700px;
+grid-column: 2 / span 5;
+grid-row: 4 / span 70;
+max-height: 650px;
+max-width: 700px;
 }
 
 .compIMG{
-  height: 100px;
-  max-width: 250px;
-  float: left;
+height: 100px;
+max-width: 250px;
+float: left;
 }
 
 
 #mSpan{
-  margin-top: 50px;
+margin-top: 50px;
 }
 
 table {
-  color: white;
+color: white;
 }
 
 td {
-  border-right: 1px solid #8FA575;
-  border-left: 1px solid #8FA575;
+border-right: 1px solid #8FA575;
+border-left: 1px solid #8FA575;
 }
 
 #bars {
-  display: grid;
-  justify-content: right;
+display: grid;
+justify-content: right;
 }
 div {
-  background-color: #2f4550;
-  color: white;
-  border-radius: 5px;
-  padding: 20px;
-  font-size: 150%;
+background-color: #2f4550;
+color: white;
+border-radius: 5px;
+padding: 20px;
+font-size: 150%;
 }
 
 #portfolioDiv {
-  grid-column: 1 / span 2;
+grid-column: 1 / span 2;
 }
 
 ul {
-  
-  list-style-type: none;
-  padding: 0%;
-  display: inline-block;
 
-  width: 100%;
-  height: 600px;
-  overflow: hidden;
-  overflow-y: scroll;
+list-style-type: none;
+padding: 0%;
+display: inline-block;
+
+width: 100%;
+height: 600px;
+overflow: hidden;
+overflow-y: scroll;
+border-style: solid;
+border-color: black;
+
+}
+.b a {
+  display: grid;
+  margin: 15px;
+  padding: 25px;
+  border: 5px;
+  color: white;
+  background-color: rgb(48, 126, 126);
   border-style: solid;
   border-color: black;
-
+  justify-content: space-evenly;
 }
+/*
+ * Made by Erik Terwan
+ * 24th of November 2015
+ * MIT license
+ *
+ *
+ * If you are thinking of using this in
+ * production code, beware of the browser
+ * prefixes.
+ */
 
-@media screen and (max-width: 768px) {
-  /* For mobile phones: */
-  [class*="col-"] {
-    width: 100%;
-  }
-}
+ body
+ {
+   margin: 0;
+   padding: 0;
+   
+   /* make it look decent enough */
+   background: #232323;
+   color: #cdcdcd;
+   font-family: "Avenir Next", "Avenir", sans-serif;
+   
+   overflow-x: hidden; /* needed because hiding the menu on the right side is not perfect,  */
+ }
+ 
+ a
+ {
+   text-decoration: none;
+   color: #232323;
+   
+   transition: color 0.3s ease;
+ }
+ 
+ a:hover
+ {
+   color: tomato;
+ }
+ 
+ #menuToggle
+ {
+   display: block;
+   position: absolute;
+   top: 25px;
+   right: 25px;
+   
+   z-index: 1;
+   
+   -webkit-user-select: none;
+   user-select: none;
+ }
+ 
+ #menuToggle input
+ {
+   display: block;
+   width: 40px;
+   height: 32px;
+   position: absolute;
+   top: 14px;
+   right: 14px;
+   
+   cursor: pointer;
+   
+   opacity: 0; /* hide this */
+   z-index: 2; /* and place it over the hamburger */
+   
+   -webkit-touch-callout: none;
+ }
+ 
+ /*
+  * Just a quick hamburger
+  */
+ #menuToggle span
+ {
+   display: block;
+   width: 33px;
+   height: 4px;
+   margin-bottom: 5px;
+   position: relative;  
+   
+   background: #cdcdcd;
+   border-radius: 3px;
+   
+   z-index: 1;
+   
+   transform-origin: 4px 0px;
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               opacity 0.55s ease;
+ }
+ 
+ #menuToggle span:first-child
+ {
+   transform-origin: 0% 0%;
+ }
+ 
+ #menuToggle span:nth-last-child(2)
+ {
+   transform-origin: 0% 100%;
+ }
+ 
+ /* 
+  * Transform all the slices of hamburger
+  * into a crossmark.
+  */
+ #menuToggle input:checked ~ span
+ {
+   opacity: 1;
+   transform: rotate(45deg) translate(-2px, -1px);
+   background: #232323;
+ }
+ 
+ /*
+  * But let's hide the middle one.
+  */
+ #menuToggle input:checked ~ span:nth-last-child(3)
+ {
+   opacity: 0;
+   transform: rotate(0deg) scale(0.2, 0.2);
+ }
+ 
+ /*
+  * Ohyeah and the last one should go the other direction
+  */
+ #menuToggle input:checked ~ span:nth-last-child(2)
+ {
+   opacity: 1;
+   transform: rotate(-45deg) translate(0, -1px);
+ }
+ 
+ /*
+  * Make this absolute positioned
+  * at the top right of the screen
+  */
+ #menu
+ {
+   position: absolute;
+   width: 300px;
+   margin: -100px 0 0 0;
+   padding: 50px;
+   padding-top: 125px;
+   right: -100px;
+   
+   background: #ededed;
+   list-style-type: none;
+   -webkit-font-smoothing: antialiased;
+   /* to stop flickering of text in safari */
+   
+   transform-origin: 0% 0%;
+   transform: translate(100%, 0);
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+ }
+ 
+ #menu li
+ {
+   padding: 10px 0;
+   font-size: 22px;
+ }
+ 
+ /*
+  * And let's fade it in from the left
+  */
+ #menuToggle input:checked ~ ul
+ {
+   transform: none;
+   opacity: 1;
+ }
+ 
+ @media screen and (max-width: 768px) {
+   #menu {
+     transform: none;
+     opacity: 0;
+ 
+     transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+   }
+ }
