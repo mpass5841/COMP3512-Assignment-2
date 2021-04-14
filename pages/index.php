@@ -11,6 +11,11 @@ include "./helpers/api-users.php";
 <main class='container'>
 <?php
 
+if(isset($_GET['logout'])){
+    unset($_SESSION['login']);
+    unset($_GET['logout']);
+}
+
 //gets the email from the login page, then verifies user based off the user table
 if(isset($_POST['email'])){
     $data = json_encode(getUsers());
@@ -47,10 +52,7 @@ function makeMain(){
     echo "<div class='box bMain'id='secondContainer'>";
     makeButtons();
     
-    if(isset($_GET['logout'])){
-        unset($_SESSION['login']);
-        unset($_GET['logout']);
-    }
+    
 
     if(isset($_SESSION['login']) && $_SESSION['login'] == true){
         echo "<script>
