@@ -1,7 +1,10 @@
-<link rel=stylesheet href='helpers/style.css'>;
+<link rel=stylesheet href='helpers/style.css'>
 <head>
-<style><?php include "helpers/style.css"?></style>
+<style><?php 
+session_start();
+include "helpers/style.css"?></style>
 <?php
+
 include "helpers/generate-header.php";
 include "helpers/api-companies.php";
 ?>
@@ -55,13 +58,9 @@ function makeMain()
             echo "<li style='cursor: pointer;' id='" . $company["symbol"] . "'> <img id='img" . $company["symbol"] . "'src='../logos/" . $company["symbol"] . ".svg' style='width:100px;height:50px'>" . $company["symbol"] . "  " . $company["name"] . "</li>";
             echo "<script>
                 document.querySelector('#" . $company["symbol"] . "').addEventListener('click', () => {
-
                     document.location.href = 'single-company.php?symbol=" . $company["symbol"] . "';
-
                 });
-
                 
-
             </script>";
 
         }

@@ -1,6 +1,8 @@
-<link rel=stylesheet href='helpers/style.css'>;
+<link rel=stylesheet href='helpers/style.css'>
 <head>
-<style><?php include "helpers/style.css"?></style>
+<style><?php 
+session_start();
+include "helpers/style.css"?></style>
 <?php include "helpers/generate-header.php";
 include "helpers/api-portfolio.php";
 include "helpers/api-companies.php";
@@ -11,7 +13,7 @@ include "helpers/api-history.php";
 <body>
 <main class="container">
 <?php
-session_start();
+
 $data = getPortfolio($_SESSION['id']);
 makeHeader();
 
@@ -33,22 +35,17 @@ function makeMain($data)
     $temp = 0;
     
     foreach ($portfolioList as $portfolio => $item) {
-
         $duplicate = false;
         $count = 0;
         foreach ($properPortfolioList as $properItem) {
-
             
-
             if ($properItem['symbol'] == $item['symbol']) {
-
                 
                 (int) $properItem['amount'] += (int) $item['amount'];
                 
                 //array_push($properPortfolioList, $properItem);
                 var_dump($properItem['amount']);
                 $duplicate = true;
-
             }
             
             
@@ -60,7 +57,6 @@ function makeMain($data)
         if ($duplicate == false) {
             array_push($properPortfolioList, $item);
         }
-
     }
     var_dump($properPortfolioList);
     */
@@ -99,11 +95,9 @@ function makeMain($data)
               </td>";
         echo "</tr>";
         echo "<script>
-
                 document.querySelector('#" . $item['symbol'] . "').addEventListener('click', () => {
                     document.location.href = 'single-company.php?symbol=" . $item["symbol"] . "';
                 });
-
               </script>";
     }
 

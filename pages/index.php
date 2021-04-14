@@ -1,5 +1,7 @@
 <head>
-<style><?php include "helpers/style.css" ?></style>
+<style><?php
+session_start();
+include "helpers/style.css" ?></style>
 <?php include "helpers/generate-header.php"; 
 include "helpers/api-users.php";
 ?>
@@ -8,7 +10,7 @@ include "helpers/api-users.php";
 <body>
 <main class='container'>
 <?php
-session_start();
+
 
 if(isset($_POST['email'])){
     $data = json_encode(getUsers());
@@ -74,4 +76,3 @@ function makeMain(){
 
 </main>
 </body>
-
